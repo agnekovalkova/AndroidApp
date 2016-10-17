@@ -1,0 +1,7 @@
+#Mon Oct 10 12:07:38 BST 2016
+base.0=/Users/Joshua/Downloads/GPSTRy3 copy 3 working map and coords/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_25a74eb8bb142afabc0dc15e35a521735761482f
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/Joshua/Downloads/GPSTRy3 copy 3 working map and coords/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_aedf45681dddbccbf074f0d3ad48d5c9bc544d41/classes.dex
+base.1=/Users/Joshua/Downloads/GPSTRy3 copy 3 working map and coords/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_aedf45681dddbccbf074f0d3ad48d5c9bc544d41
+file.0=/Users/Joshua/Downloads/GPSTRy3 copy 3 working map and coords/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_25a74eb8bb142afabc0dc15e35a521735761482f/classes.dex

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="24"
+    density="420dpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="78115949264970"
+    token="-7125125352799235975"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="1626" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="888" />
+    <task
+        name="verifier"
+        duration="481" />
+
+    <artifact
+        location="/Users/Joshua/Downloads/GPSTRy3 copy 3 working map and coords/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="78115949264970"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/Joshua/Downloads/GPSTRy3 copy 3 working map and coords/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>
