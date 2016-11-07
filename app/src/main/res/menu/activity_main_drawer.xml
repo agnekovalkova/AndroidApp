@@ -13,7 +13,11 @@
         <item
             android:id="@+id/location"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Current Location" />
+            android:title="Task 2" />
+        <item
+            android:id="@+id/task3"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Task 3" />
     </group>
 
     <item android:title="Settings">
