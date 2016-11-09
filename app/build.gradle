@@ -11,6 +11,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+
         multiDexEnabled true
 
     }
@@ -36,5 +37,11 @@ dependencies {
     //compile 'com.google.android.gms:play-services:8.4.0'
     //compile 'com.google.android.gms:play-services-appindexing:8.4.0'
 
+    // Required for local unit tests (JUnit 4 framework)
+
+    // Required for instrumented tests
+    androidTestCompile 'com.android.support:support-annotations:24.2.1'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test:rules:0.5'
 
 }

@@ -146,48 +146,56 @@ public class MainActivity extends AppCompatActivity
 //        if (postcode.matches("(GIR 0AA)|((([A-Z-[QVX]][0-9][0-9]?)|(([A-Z-[QVX]][A-Z-[IJZ]][0-9][0-9]?)|(([A-Z-[QVX]][0-9][A-HJKPSTUW])|([A-Z-[QVX]][A-Z-[IJZ]][0-9][ABEHMNPRVWXY])))) [0-9][A-Z-[CIKMOV]]{2})"))
 //            return true;
 
-        String pcode = postcode.toUpperCase().trim();
-        String mTest = "";
+        String[] pArray = postcode.toUpperCase().trim().split(" ");
+        String areaDistrict = pArray[0];
 
-     //   switch (pcode.length()){
-    //        case 1:
-      //              mTest = "[A-Z-[QVX]]";
-//                    break;
-//            case 2:
-//                    mTest = "([A-Z-[^QVX]][0-9])|([A-Z-[^QVX]][A-Z-[^IJZ]])";
-//                    break;
-//            case 3:
-//                    mTest = "(([A-Z-[QVX]][0-9][0-9])|([A-Z-[QVX]][A-Z-[IJZ]][0-9])|([A-Z-[QVX]][0-9][A-HJKPSTUW]))";
-//                    break;
-//            case 4:
-//                    mTest = "(([A-Z-[QVX]][A-Z-[IJZ]][0-9][0-9])|([A-Z-[QVX]][A-Z-[IJZ]][0-9][ABEHMNPRVWXY]))";
-//                    break;
- //           case 5:
- //                   mTest = "(([A-Z-[QVX]][0-9][0-9] [0-9])|([A-Z-[QVX]][A-Z-[IJZ]][0-9] [0-9])|([A-Z-[QVX]][0-9][A-HJKPSTUW] [0-9])|([A-Z-[QVX]][0-9] [0-9][A-Z-[CIKMOV]])";
- //                   break;
- //           case 6:
- //                   mTest = "(([A-Z-[QVX]][0-9][0-9] [0-9][A-Z-[CIKMOV]])|([A-Z-[QVX]][A-Z-[IJZ]][0-9] [0-9][A-Z-[CIKMOV]])|([A-Z-[QVX]][0-9][A-HJKPSTUW] [0-9][A-Z-[CIKMOV]])|([A-Z-[QVX]][0-9] [0-9][A-Z-[CIKMOV]]{2})|([A-Z-[QVX]][A-Z-[IJZ]][0-9][0-9] [0-9])|([A-Z-[QVX]][A-Z-[IJZ]][0-9][ABEHMNPRVWXY] [0-9]))";
-          //  valid formats   (               A99 9Aa                   )|(                  AA9 9Aa                      )|(                    A9A 9Aa                     )|(                    A9 9AA             )|(                 AA99 9aa             )|(                   AA9A 9aa                    )
- //                   break;
- //           case 7:
- //           default: ;
- //       }
- //       if (!pcode.matches(mTest)) {
- //           Toast.makeText(this, "Postcode format invalid. Try again.", Toast.LENGTH_SHORT).show();
- //           return false;
- //       }
+        String sectorUnit = "";
+        if (pArray.length == 2)
+             sectorUnit = pArray[1];
+
+        String pMatch = "";
+
+        switch (areaDistrict.length()) {
+            case 1:
+                pMatch = "[A-Z&&[^QVX]]";
+                break;
+            case 2:
+                pMatch = "([A-Z&&[^QVX]][0-9])|([A-Z&&[^QVX]][A-Z&&[^IJZ]])";
+                break;
+            case 3:
+                pMatch = "(([A-Z&&[^QVX]][0-9][0-9])|([A-Z&&[^QVX]][A-Z&&[^IJZ]][0-9])|([A-Z&&[^QVX]][0-9][A-HJKPSTUW]))";
+                break;
+            case 4:
+                pMatch = "(([A-Z&&[^QVX]][A-Z&&[^IJZ]][0-9][0-9])|([A-Z&&[^QVX]][A-Z&&[^IJZ]][0-9][ABEHMNPRVWXY]))";
+                break;
+            default: ;
+        }
+
+        if (!areaDistrict.matches(pMatch)) {
+           Toast.makeText(this, "Postcode format invalid. Try again.", Toast.LENGTH_SHORT).show();
+           return false;
+        }
+
+        switch (sectorUnit.length()) {
+            case 1:
+                pMatch = "[0-9]";
+                break;
+            case 2:
+                pMatch = "([0-9][A-Z&&[^CIKMOV]])";
+                break;
+            case 3:
+                pMatch = "([0-9][A-Z&&[^CIKMOV]]{2})";
+                break;
+            default: ;
+        }
+
+        if (sectorUnit != "" && !sectorUnit.matches(pMatch)) {
+            Toast.makeText(this, "Postcode format invalid. Try again.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
 
         return true;
     }
-
-//    public void onClick(View view)
-//    {
-    //    String postc = postcode.getText().toString();
- //       String mapUrl = "http://lowcost-env.kdumcfjv2e.us-west-2.elasticbeanstalk.com/TestMapServlet?maptype=heatmap&postcode=BN3";
- //       Intent Getintent = new Intent(Intent.ACTION_VIEW, Uri.parse(mapUrl));
- //       startActivity(Getintent);
- //   }
-
 
 }
 
