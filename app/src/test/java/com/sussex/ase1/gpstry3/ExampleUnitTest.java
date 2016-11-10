@@ -21,15 +21,17 @@ public class ExampleUnitTest {
 
         assertTrue (myUnit.validPostcode("BN1 9PE"));
     }
-    @Test
-    public void test1()  {
+
+
+    //@Test
+    //public void test1()  {
         //  create mock
-        MainActivity test = Mockito.mock(MainActivity.class);
+       // MainActivity test = Mockito.mock(MainActivity.class);
 
         // define return value for method getUniqueId()
-        when(test.testMock()).thenReturn(true);
+        //when(test.testMock()).thenReturn(true);
 
         // use mock in test....
-        assertEquals(test.testMock(), true);
-    }
+        //assertEquals(test.testMock(), true);
+    //}
 }
