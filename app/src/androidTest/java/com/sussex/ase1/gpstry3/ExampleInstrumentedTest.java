@@ -23,4 +23,12 @@ public class ExampleInstrumentedTest {
 
         assertEquals("com.sussex.ase1.gpstry3", appContext.getPackageName());
     }
+
+    private Location location;
+
+    public void NewTest(){
+        location = new Location();
+        location.test();
+        assertTrue (location.test(), true);
+    }
 }
