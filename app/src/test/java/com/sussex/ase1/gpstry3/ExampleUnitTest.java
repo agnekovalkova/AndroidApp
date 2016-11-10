@@ -19,7 +19,7 @@ public class ExampleUnitTest {
     public void addition_isCorrect() throws Exception {
         MainActivity myUnit = new MainActivity();
 
-        assertTrue (myUnit.validPostcode("QN1 9PE"));
+        assertTrue (myUnit.validPostcode("BN1 9PE"));
     }
     @Test
     public void test1()  {

@@ -53,7 +53,7 @@ before_script:
 script:
   - travis_wait ./gradlew connectedCheck
   - adb devices
-  - adb logcat.e &
+  - adb logcat :E &
 
 
 
