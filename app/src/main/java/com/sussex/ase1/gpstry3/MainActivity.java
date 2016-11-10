@@ -136,6 +136,10 @@ public class MainActivity extends AppCompatActivity
         startActivity(webIntent);
     }
 
+    public boolean testMock() {
+        return true;
+    }
+
     public boolean validPostcode(String postcode){
       //  valid postcode formats    AA9A 9AA  |  A9A 9AA   |  A9 9AA  |  A99 9AA   |  AA9 9AA   |  AA99 9AA
 
