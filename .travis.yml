@@ -59,6 +59,7 @@ before_script:
 
 script:
   - travis_wait ./gradlew connectedCheck
+  - ./gradlew connectedAndroidTest -i
   - adb devices
 
 after_failure:
