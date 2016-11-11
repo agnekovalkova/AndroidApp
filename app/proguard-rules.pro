@@ -8,7 +8,7 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
--keepattributes InnerClasses
+-keepattributes EnclosingMethod
 -dontoptimize
 
 # If your project uses WebView with JS, uncomment the following
