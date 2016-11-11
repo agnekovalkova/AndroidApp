@@ -50,7 +50,7 @@ before_script:
   - adb shell input keyevent 82 &
 
   - sudo apt-get install -qq lynx
-  - export MOD_NAME=yourappmodulename
+  - export MOD_NAME=com.sussex.ase1.gpstry3
   - export LOG_DIR=${TRAVIS_BUILD_DIR}/${MOD_NAME}/build/outputs/reports/androidTests/connected/
   - lynx --dump ${LOG_DIR}com.android.builder.testing.ConnectedDevice.html > myConnectedDevice.log
   - lynx --dump ${LOG_DIR}com.android.builder.testing.html > myTesting.log
