@@ -81,7 +81,7 @@ public class MainActivityTest {
             }else {
                 logString = goodPostcodes[i] + " false";
             }
-            Log.e("ASE1_VALID_POSTCODE", logString);
+            Log.e("TASE1_VALID_POSTCODE", logString);
         assertTrue(aaa.validPostcode(goodPostcodes[i]) == (areaDistrict.matches(aMatch) == sectorUnit.matches(sMatch)));
 
         }
